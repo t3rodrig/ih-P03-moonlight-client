@@ -11,14 +11,14 @@ const Header = () => {
         <div className="col-md-8 col-sm-12">
           <form className="form-inline">
             <div className="form-group">
-              <label>Email</label>
-              <input type="email" placeholder="Enter Email..." className="form-control"/>
+              <label className="mr-sm-2">Email</label>
+              <input type="email" placeholder="Enter Email..." className="form-control mr-sm-2"/>
             </div>
             <div className="form-group">
-              <label>Password</label>
-              <input type="password" placeholder="Enter Password.." className="form-control"/>
+              <label className="mr-sm-2">Password</label>
+              <input type="password" placeholder="Enter Password.." className="form-control mr-sm-2"/>
             </div>
-            <button type="submit" className="btn btn-light">Login</button>
+            <button type="submit" className="btn btn-light my-2 my-sm-0">Login</button>
           </form>
         </div>
       </div>
