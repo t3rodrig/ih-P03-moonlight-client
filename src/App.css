@@ -33,3 +33,13 @@ header form {
   background-color: #563d7c; /* @primary */
   border-radius: 5px;
 }
+
+#products img.thumbnail {
+  width: 130px;
+  height: 130px;
+}
+
+#products img.star {
+  width: 14px;
+  height: 14px;
+}
