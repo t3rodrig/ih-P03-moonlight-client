@@ -2,16 +2,6 @@
 
 /* @primary: #563d7c */
 
-body {
-  margin: 0;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 14px;
-}
-
-.h4, h4 {
-  font-size: 18px;
-}
-
 .navbar {
   margin-top: 30px;
   margin-bottom: 20px;
@@ -50,14 +40,12 @@ header form {
   margin-bottom: 20px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  box-sizing: border-box;
-  /* font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; */
-  /* font-size: 14px; */
 }
 
 .thumbnail img.product-image {
   width: 130px;
   height: 130px;
+  display: block;
   margin-right: auto;
   margin-left: auto;
 }
