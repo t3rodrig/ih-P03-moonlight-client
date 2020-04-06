@@ -4,17 +4,17 @@ const ProductThumbnail = (props) => {
   const { product } = props;
   return (
     <div className="thumbnail">
-      <img src={product.imageURL} alt="Product" className="thumbnail"/>
+      <img src={product.imageURL} alt="Product" className="product-image"/>
       <div className="caption">
-        <h4 className="pull-right">
+        <h5 className="float-right">
           {`$${product.price}`}
-        </h4>
-        <h4>{product.name}</h4>
+        </h5>
+        <h5>{product.name}</h5>
       </div>
       <div className="ratings">
-        <p className="pull-right">4 Reviews</p>
+        <p className="float-right">4 Reviews</p>
         <p>
-        <img src="/images/star-fill.svg" alt="" className="star"/>
+          <img src="/images/star-fill.svg" alt="" className="star"/>
         </p>
       </div>
     </div>

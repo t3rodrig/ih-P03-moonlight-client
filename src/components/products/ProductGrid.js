@@ -18,7 +18,7 @@ class ProductGrid extends Component {
         <div className="row">
           { listOfProducts.map((eachProduct) => {
             return (
-              <div className="col-md-4" key={eachProduct._id}>
+              <div className="col-lg-4" key={eachProduct._id}>
                 <ProductThumbnail product={eachProduct}/>
               </div>
             )

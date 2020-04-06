@@ -2,6 +2,16 @@
 
 /* @primary: #563d7c */
 
+body {
+  margin: 0;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+}
+
+.h4, h4 {
+  font-size: 18px;
+}
+
 .navbar {
   margin-top: 30px;
   margin-bottom: 20px;
@@ -34,12 +44,29 @@ header form {
   border-radius: 5px;
 }
 
-#products img.thumbnail {
-  width: 130px;
-  height: 130px;
+.thumbnail {
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  /* font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; */
+  /* font-size: 14px; */
 }
 
-#products img.star {
+.thumbnail img.product-image {
+  width: 130px;
+  height: 130px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.thumbnail .caption {
+  padding: 9px;
+}
+
+.thumbnail img.star {
   width: 14px;
   height: 14px;
 }
