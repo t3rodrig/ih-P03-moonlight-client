@@ -1,9 +1,13 @@
-import React from 'react';
+import React, {Fragment} from 'react';
+import Jumbotron from '../components/Jumbotron';
 import ProductGrid from "../components/products/ProductGrid";
 
 const Home = () => {
   return (
-    <ProductGrid />
+    <Fragment>
+      <Jumbotron />
+      <ProductGrid />
+    </Fragment>
   );
 };
 
