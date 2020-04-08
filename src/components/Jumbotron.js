@@ -2,7 +2,7 @@ import React from 'react';
 
 const Jumbotron = () => {
   return (
-    <div className="jumbotron">
+    <div id="jumbotron" className="jumbotron">
       <ul className="nav nav-tabs" id="myTab" role="tablist">
         <li className="nav-item">
           <a className="nav-link active" id="featured-tab" data-toggle="tab" href="#featured" role="tab" aria-controls="featured" aria-selected="true">Featured Item</a>
