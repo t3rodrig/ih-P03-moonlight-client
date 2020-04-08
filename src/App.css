@@ -113,6 +113,18 @@ header form {
 	margin-left:40px;
 }
 
+.main-img{
+	width:100%;
+}
+
+footer{
+	text-align:center;
+	height:60px;
+	background:#f4f4f4;
+	padding-top:20px;
+	margin-top:50px;
+}
+
 @media(max-width:960px){
 	header form{
 		width:100% !important;
