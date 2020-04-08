@@ -75,24 +75,20 @@ header form {
 #jumbotron .nav-tabs .nav-item{
 	background-color:#ccc;
 	color:#666;
-	padding: 15px 10px 15px 20px;
 	margin-bottom:5px;
+	padding: 0;
 	width:100%;
 }
 
-#jumbotron .nav-tabs .nav-item.active{
-	background-color: #563d7c; /* @primary */
-	color:#fff;
+#jumbotron .nav-tabs .nav-link{
+	color:#666;
+	border: 0;
+	padding: 15px 10px 15px 20px;
 }
 
-#jumbotron .nav-tabs .nav-item .nav-link{
-  color:#666;
-  padding: 0;
-}
-
-#jumbotron .nav-tabs .nav-item.active .nav-link{
-  color:#fff;
-  padding: 0;
+#jumbotron .nav-tabs .nav-link.active {
+	background: #563d7c; /* @primary */
+	color: #fff;
 }
 
 .tab-content {
