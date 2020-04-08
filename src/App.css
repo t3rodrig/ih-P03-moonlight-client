@@ -83,6 +83,7 @@ header form {
 #jumbotron .nav-tabs .nav-link{
 	color:#666;
 	border: 0;
+	border-radius: 0;
 	padding: 15px 10px 15px 20px;
 }
 
