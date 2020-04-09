@@ -1,11 +1,12 @@
 import React from 'react';
+import ProductDetails from '../components/products/ProductDetails';
 
 const ProductPage = () => {
   return (
     <section id="product-section">
       <div className="row">
         <div className="col-md-8">
-          <span>PRODUCT</span>
+          <ProductDetails />
         </div>
         <div className="col-md-4">
           <div className ="list-group">
