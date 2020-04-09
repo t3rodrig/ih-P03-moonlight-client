@@ -1,4 +1,5 @@
 import React from 'react';
+import { IoIosLogIn, IoMdCart } from "react-icons/io";
 
 const Header = () => {
   return (
@@ -9,17 +10,17 @@ const Header = () => {
           <p className="subtext">The moon is a loyal companion</p>
         </div>
         <div className="col-md-8 col-sm-12">
-          <form className="form-inline">
-            <div className="form-group">
-              <label className="mr-sm-2">Email</label>
-              <input type="email" placeholder="Enter Email..." className="form-control mr-sm-2"/>
-            </div>
-            <div className="form-group">
-              <label className="mr-sm-2">Password</label>
-              <input type="password" placeholder="Enter Password.." className="form-control mr-sm-2"/>
-            </div>
-            <button type="submit" className="btn btn-light my-2 my-sm-0">Login</button>
-          </form>
+          <ul className="nav justify-content-end">
+            <li className="nav-item">
+              <a className="nav-link" href="#"> <IoIosLogIn size="3em" color="#C83C27"/> </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#"> <IoMdCart size="3em" color="#C83C27"/> </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">Link</a>
+            </li>
+          </ul>
         </div>
       </div>
     </header>
