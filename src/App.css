@@ -3,7 +3,7 @@
 /* @primary: #563d7c */
 
 .navbar {
-  margin-top: 30px;
+  /* margin-top: 30px; */
   margin-bottom: 20px;
   background-color: #563d7c; /* @primary */
   border: 1px solid #ccc;
@@ -14,25 +14,14 @@
   color: #cbbde2;
 }
 
-.subtext {
+header .logo {
+	width: 100%;
+	font-family: 'Oswald', sans-serif;
+}
+
+header .subtext {
   font-size: 16px;
   font-weight: bold;
-  /* margin: 10px 0 0 45px; */
-}
-
-.logo {
-  width: 100%;
-  margin: 40px 0 0 0;
-  font-family: 'Oswald', sans-serif;
-}
-
-header form {
-  float: right;
-  padding: 15px;
-  margin-top: 30px;
-  color: #fff;
-  background-color: #563d7c; /* @primary */
-  border-radius: 5px;
 }
 
 .thumbnail {
