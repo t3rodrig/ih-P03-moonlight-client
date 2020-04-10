@@ -15,15 +15,15 @@ const ProductDetails = (props) => {
 
           <p>
             Quanity:
-            <select className="form-control">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
+            <select name="quantity" id="product-quantity" className="form-control">
+              <option value="1" selected="selected">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
             </select>
           </p>
-          <a href="#" className="btn btn-success">Buy Now</a>
+          <a href="#" className="btn btn-success">Add to Cart</a>
           <br/>
           <br/>
           <br/>
