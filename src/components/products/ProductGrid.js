@@ -1,14 +1,29 @@
 import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
-// import axios from 'axios';
+import ProductService from '../../services/product-service';
 
 import ProductThumbnail from './ProductThumbnail';
-import products from './products.json';
+// import products from './products.json';
 
 class ProductGrid extends Component {
   constructor() {
     super();
-    this.state = { listOfProducts: products};
+    this.state = { listOfProducts: [] };
+    this.service = new ProductService();
+  }
+
+  fetchProducts = () => {
+    if (this.state.listOfProducts.length === 0) {
+      this.service.getAllProducts()
+      .then(response => {
+        this.setState({listOfProducts: response});
+      })
+      .catch(err => this.setState({listOfProducts: []}));
+    }
+  }
+
+  componentDidMount() {
+    this.fetchProducts();
   }
 
   render() {
