@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ProductThumbnail = (props) => {
   const { product } = props;
@@ -9,7 +10,7 @@ const ProductThumbnail = (props) => {
         <h5 className="float-right">
           {`$${product.price}`}
         </h5>
-        <h5>{product.name}</h5>
+        <h5><Link to={`/product/${product._id}`}>{product.name}</Link></h5>
       </div>
       <div className="ratings">
         <p className="float-right">4 Reviews</p>

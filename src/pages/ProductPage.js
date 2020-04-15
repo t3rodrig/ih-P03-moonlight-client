@@ -1,12 +1,13 @@
 import React from 'react';
 import ProductDetails from '../components/products/ProductDetails';
 
-const ProductPage = () => {
+const ProductPage = (props) => {
+  const { params } = props.match;
   return (
     <section id="product-section">
       <div className="row">
         <div className="col-md-8">
-          <ProductDetails />
+          <ProductDetails params={params} />
         </div>
         <div className="col-md-4">
           <div className ="list-group">

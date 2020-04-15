@@ -1,9 +1,16 @@
-import React, { Fragment } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Fragment, Component } from 'react';
+import ProductService from '../../services/product-service';
+// import { Link } from 'react-router-dom';
 
-const ProductDetails = (props) => {
-  const { product } = props;
-  return (
+class ProductDetails extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { singleProduct: {} };
+    this.service = new ProductService();
+  }
+
+  render() {
+    return (
     <Fragment>
       <div className="row">
         <div className="col-md-4">
@@ -62,7 +69,8 @@ const ProductDetails = (props) => {
         </div>
       </div>
     </Fragment>
-  );
-};
+    );
+  }
+}
 
 export default ProductDetails;
