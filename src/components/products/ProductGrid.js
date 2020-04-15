@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
 import ProductService from '../../services/product-service';
-
 import ProductThumbnail from './ProductThumbnail';
-// import products from './products.json';
 
 class ProductGrid extends Component {
   constructor() {
