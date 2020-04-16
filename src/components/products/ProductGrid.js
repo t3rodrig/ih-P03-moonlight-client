@@ -30,7 +30,6 @@ class ProductGrid extends Component {
 
   render = () => {
     const listOfProducts = this.state.listOfProducts;
-    return <h1>Hola</h1>;
     return (
       <section id="products">
         <div className="row">
