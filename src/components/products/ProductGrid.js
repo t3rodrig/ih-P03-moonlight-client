@@ -13,8 +13,12 @@ class ProductGrid extends Component {
     if (this.state.listOfProducts.length === 0) {
       this.service.getAllProducts()
       .then(response => {
-        console.log(response);
-        this.setState({listOfProducts: response});
+        if (response){
+          this.setState({listOfProducts: response});
+        } else {
+          console.log('Something wrong with the request'); 
+          this.setState({listOfProducts: []})
+        }
       })
       .catch(err => this.setState({listOfProducts: []}));
     }
@@ -26,7 +30,6 @@ class ProductGrid extends Component {
 
   render = () => {
     const listOfProducts = this.state.listOfProducts;
-    console.log(listOfProducts);
     return <h1>Hola</h1>;
     return (
       <section id="products">
