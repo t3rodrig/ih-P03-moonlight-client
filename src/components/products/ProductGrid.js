@@ -23,8 +23,10 @@ class ProductGrid extends Component {
     this.fetchProducts();
   }
 
-  render() {
+  render = () => {
     const listOfProducts = this.state.listOfProducts;
+    console.log(listOfProducts);
+    return <h1>Hola</h1>;
     return (
       <section id="products">
         <div className="row">
