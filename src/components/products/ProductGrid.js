@@ -13,6 +13,7 @@ class ProductGrid extends Component {
     if (this.state.listOfProducts.length === 0) {
       this.service.getAllProducts()
       .then(response => {
+        console.log(response);
         this.setState({listOfProducts: response});
       })
       .catch(err => this.setState({listOfProducts: []}));
