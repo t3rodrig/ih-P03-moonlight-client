@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Jumbotron = () => {
   return (
@@ -19,7 +20,7 @@ const Jumbotron = () => {
           <div className="tab-text">
             <h2>Apple iPhone 6</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis ornare dolor. Vivamus malesuada auctor est id aliquet. Morbi rutrum lectus sit amet purus pulvinar vehicula</p>
-            <a href="product.html" className="btn btn-light">Read More</a>
+            <Link to="/product/5e99fa391e3ec53bd9e21c87" className="btn btn-light" >Read More</Link>
           </div>
           <img className="slide-img" src="/images/iphone.png"/>          
         </div>
@@ -27,7 +28,7 @@ const Jumbotron = () => {
           <div className="tab-text">
             <h2>Xbox One</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis ornare dolor. Vivamus malesuada auctor est id aliquet. Morbi rutrum lectus sit amet purus pulvinar vehicula</p>
-            <a href="product.html" className="btn btn-light">Read More</a>
+            <Link to="/product/5e99fa391e3ec53bd9e21c82" className="btn btn-light" >Read More</Link>
           </div>
           <img className="slide-img" src="/images/xbox.png"/>
         </div>
@@ -35,7 +36,7 @@ const Jumbotron = () => {
           <div className="tab-text">
             <h2>Vizio Smart TV</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis ornare dolor. Vivamus malesuada auctor est id aliquet. Morbi rutrum lectus sit amet purus pulvinar vehicula</p>
-            <a href="product.html" className="btn btn-light">Read More</a>
+            <Link to="/product/5e99fa391e3ec53bd9e21c85" className="btn btn-light" >Read More</Link>
           </div>
           <img className="slide-img" src="/images/tv.png"/>
         </div>
