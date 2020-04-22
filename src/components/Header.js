@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { IoIosLogIn, IoMdCart } from "react-icons/io";
 
 const Header = () => {
@@ -12,7 +13,8 @@ const Header = () => {
         <div className="col-sm-6 col-md-8">
           <ul className="nav justify-content-end">
             <li className="nav-item">
-              <a className="nav-link" href="#"> <IoIosLogIn title="Login" size="3em" color="#000"/> </a>
+              <Link to="/login" className="nav-link"> <IoIosLogIn title="Login" size="3em" color="#000"/> </Link>
+              {/* <a className="nav-link" href="#"> <IoIosLogIn title="Login" size="3em" color="#000"/> </a> */}
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#"> <IoMdCart title="Cart" size="3em" color="#000"/> </a>
