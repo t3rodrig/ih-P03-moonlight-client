@@ -1,27 +1,58 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import './App.css';
 
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
+import HomePage from './pages/HomePage';
 import ProductPage from './pages/ProductPage';
+import Login from './components/auth/Login';
+import Signup from './components/auth/Signup';
+import Header from './components/Header';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import AuthService from './services/auth-service';
+import ProtectedRoute from './components/auth/protected-route';
 
-function App() {
-  return (
-    <div className="App container">
-      <Header />
-      <Navbar />
+class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = { loggedInUser: null };
+    this.service = new AuthService();
+  }
 
-      <Switch>
-        <Route exact path='/' component={Home} />
-        <Route exact path='/product/:id' component={ProductPage} />
-      </Switch>
+  fetchUser(){
+    if (this.state.loggedInUser === null) {
+      this.service.loggedin()
+      .then(response => {
+        this.setState({loggedInUser: response});
+      })
+      .catch(err => this.setState({loggedInUser: false}));
+    }
+  }
 
-      <Footer />
-    </div>
-  );
+  getTheUser = (userObj) => {
+    this.setState({
+      loggedInUser: userObj
+    })
+  }
+
+  render() {
+
+    return (
+      <div className="App container">
+        <Header />
+        <Navbar />
+
+        <Switch>
+          <Route exact path='/' component={HomePage} />
+          <Route exact path='/login' component={Login} />
+          <Route exact path='/signup' component={Signup} />
+          <Route exact path='/product/:id' component={ProductPage} />
+        </Switch>
+
+        <Footer />      
+      </div>
+    );
+  }
 }
 
 export default App;
