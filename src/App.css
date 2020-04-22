@@ -114,6 +114,13 @@ footer{
 	margin-top:50px;
 }
 
+.form-signin {
+	width: 100%;
+	max-width: 330px;
+	padding: 15px;
+	margin: 50px auto;
+}
+
 @media(max-width:960px){
 	header form{
 		width:100% !important;
