@@ -36,22 +36,40 @@ class App extends Component {
   }
 
   render() {
-
-    return (
-      <div className="App container">
-        <Header />
-        <Navbar />
-
-        <Switch>
-          <Route exact path='/' component={HomePage} />
-          <Route exact path='/login' component={Login} />
-          <Route exact path='/signup' component={Signup} />
-          <Route exact path='/product/:id' component={ProductPage} />
-        </Switch>
-
-        <Footer />      
-      </div>
-    );
+    this.fetchUser()
+    if (this.state.loggedInUser) {
+      return (
+        <div className="App container">
+          <Header />
+          <Navbar />
+  
+          <Switch>
+            <Route exact path='/' component={HomePage} />
+            <Route exact path='/login' component={Login} />
+            <Route exact path='/signup' component={Signup} />
+            <Route exact path='/product/:id' component={ProductPage} />
+          </Switch>
+  
+          <Footer />      
+        </div>
+      );
+    } else {
+      return (
+        <div className="App container">
+          <Header />
+          <Navbar />
+  
+          <Switch>
+            <Route exact path='/' component={HomePage} />
+            <Route exact path='/login' render={() => <Login getUser={this.getTheUser} />} />
+            <Route exact path='/signup' render={() => <Signup getUser={this.getTheUser} />} />
+            <Route exact path='/product/:id' component={ProductPage} />
+          </Switch>
+  
+          <Footer />      
+        </div>
+      );
+    }
   }
 }
 

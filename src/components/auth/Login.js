@@ -15,6 +15,7 @@ class Login extends Component {
     this.service.login(userData)
     .then(response => {
       this.setState({ userData: {} });
+      console.log(response);
       this.props.getUser(response);
     })
     .catch(err => console.log(err));
