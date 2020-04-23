@@ -42,7 +42,7 @@ class App extends Component {
         <div className="App container">
           <Header />
           <Navbar />
-  
+          <h1>Loggedin</h1>
           <Switch>
             <Route exact path='/' component={HomePage} />
             <Route exact path='/login' component={Login} />
