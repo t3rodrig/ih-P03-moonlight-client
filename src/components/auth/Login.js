@@ -5,33 +5,29 @@ import AuthService from '../../services/auth-service';
 class Login extends Component {
   constructor(props){
     super(props);
-    this.state = { userData: {} };
+    this.state = { email: '', password: ''};
     this.service = new AuthService();
   }
 
   handleFormSubmit = (event) => {
     event.preventDefault();
-    const { userData } = this.state;
+    const { email, password } = this.state;
+    const userData = { email, password };
     this.service.login(userData)
     .then(response => {
-      this.setState({ userData: {} });
-      console.log(response);
+      this.state = { email: '', password: ''};
       this.props.getUser(response);
     })
     .catch(err => console.log(err));
   }
 
   handleChange = (event) => {
-    const { userData } = { ...this.state };
-    const currentState = userData;
     const { name, value } = event.target;
-    currentState[name] = value;
-
-    this.setState({ userData: currentState });
+    this.setState({[name]: value});
   }
 
   render(){
-    const { userData } = { ...this.state };
+    const { email, password } = this.state;
     return (
       <Fragment>
       <div>
@@ -42,7 +38,7 @@ class Login extends Component {
             <input
               type="email"
               name="email"
-              value={userData.email}
+              value={email}
               onChange={event => this.handleChange(event)}
               className="form-control"
               id="inputEmail"
@@ -53,7 +49,7 @@ class Login extends Component {
             <input
               type="password"
               name="password"
-              value={userData.password}
+              value={password}
               onChange={event => this.handleChange(event)}
               className="form-control"
               id="inputPassword" 

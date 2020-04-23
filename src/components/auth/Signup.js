@@ -5,32 +5,39 @@ import AuthService from '../../services/auth-service';
 class Signup extends Component {
   constructor(props){
     super(props);
-    this.state = { userData: {} };
+    this.state = {
+      firstName: '',
+      paternalLastName: '',
+      email: '',
+      password: '',
+    };
     this.service = new AuthService();
   }
 
   handleFormSubmit = (event) => {
     event.preventDefault();
-    const { userData } = this.state;
+    const { firstName, paternalLastName, email, password } = this.state;
+    const userData = { firstName, paternalLastName, email, password };
     this.service.signup(userData)
     .then(response => {
-      this.setState({ userData: {} });
+      this.state = {
+        firstName: '',
+        paternalLastName: '',
+        email: '',
+        password: '',
+      };
       this.props.getUser(response);
     })
     .catch(err => console.log(err));
   }
   
   handleChange = (event) => {
-    const { userData } = { ...this.state };
-    const currentState = userData;
     const { name, value } = event.target;
-    currentState[name] = value;
-
-    this.setState({ userData: currentState });
+    this.setState({[name]: value});
   }
 
   render(){
-    const { userData } = { ...this.state };
+    const { firstName, paternalLastName, email, password } = this.state;
     return (
       <Fragment>
       <div>
@@ -41,7 +48,7 @@ class Signup extends Component {
             <input
               type="text"
               name="firstName"
-              value={userData.firstName}
+              value={firstName}
               onChange={event => this.handleChange(event)}
               className="form-control"
               id="inputFirstName"
@@ -52,7 +59,7 @@ class Signup extends Component {
             <input
               type="text"
               name="paternalLastName"
-              value={userData.paternalLastName}
+              value={paternalLastName}
               onChange={event => this.handleChange(event)}
               className="form-control"
               id="inputLastName"
@@ -63,7 +70,7 @@ class Signup extends Component {
             <input
               type="email"
               name="email"
-              value={userData.email}
+              value={email}
               onChange={event => this.handleChange(event)}
               className="form-control"
               id="inputEmail"
@@ -74,7 +81,7 @@ class Signup extends Component {
             <input
               type="password"
               name="password"
-              value={userData.password}
+              value={password}
               onChange={event => this.handleChange(event)}
               className="form-control"
               id="inputPassword" 
