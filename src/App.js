@@ -40,7 +40,7 @@ class App extends Component {
     if (this.state.loggedInUser) {
       return (
         <div className="App container">
-          <Header />
+          <Header userInSession={this.state.loggedInUser} getUser={this.getTheUser} />
           <Navbar />
           <h1>Loggedin</h1>
           <Switch>
@@ -56,7 +56,7 @@ class App extends Component {
     } else {
       return (
         <div className="App container">
-          <Header />
+          <Header userInSession={this.state.loggedInUser} getUser={this.getTheUser} />
           <Navbar />
   
           <Switch>
