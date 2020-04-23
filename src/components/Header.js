@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { IoIosLogIn, IoMdCart } from "react-icons/io";
+import { IoIosLogIn, IoMdCart, IoIosLogOut } from "react-icons/io";
 
 const Header = () => {
   return (
@@ -14,7 +14,9 @@ const Header = () => {
           <ul className="nav justify-content-end">
             <li className="nav-item">
               <Link to="/login" className="nav-link"> <IoIosLogIn title="Login" size="3em" color="#000"/> </Link>
-              {/* <a className="nav-link" href="#"> <IoIosLogIn title="Login" size="3em" color="#000"/> </a> */}
+            </li>
+            <li className="nav-item">
+              <Link to="/logout" className="nav-link"> <IoIosLogOut title="Logout" size="3em" color="#000"/> </Link>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#"> <IoMdCart title="Cart" size="3em" color="#000"/> </a>
