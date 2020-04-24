@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router'
 import { Link } from 'react-router-dom';
 import { IoIosLogIn, IoMdCart, IoIosLogOut } from "react-icons/io";
 import AuthService from '../services/auth-service';
@@ -19,6 +20,7 @@ class Header extends Component {
     .then(() => {
       this.setState({ loggedInUser: null });
       this.props.getUser(null);
+      this.props.history.push('/');
     });
   }
 
@@ -52,4 +54,4 @@ class Header extends Component {
   }
 }
 
-export default Header;
+export default withRouter(Header);
